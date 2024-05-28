@@ -57,7 +57,9 @@ we have `window object`  it is a global object for javascitpt and also known as 
 
 ## Accessing the DOM
 
-Download 
+Download : DOM/Attachments/Our Testing Site Files 
+
+In the above folder the files are placed we wiill be using them to understand the following things
 
 Run Command in Console to see 
 ### by querySelector
