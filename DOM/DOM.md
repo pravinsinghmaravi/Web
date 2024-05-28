@@ -7,7 +7,7 @@ DOM Stands for Document Object Model. It consists of 3 things
 **Model**          :  Representation of HTML Document.
 
 
-#### What is the DOM?
+## What is the DOM?
 
 it is an <mark style="background: #ABF7F7A6;"> object-oriented </mark>  , <mark style="background: #ABF7F7A6;">Hierarichal</mark>  and <mark style="background: #ABF7F7A6;">tree</mark>  like  representation of the web page,.
 
@@ -55,7 +55,7 @@ From The Image *Browser See*
 we have `window object`  it is a global object for javascitpt and also known as root object 
 
 
-#### Accessing the DOM
+## Accessing the DOM
 
 Download 
 
@@ -88,7 +88,7 @@ document.querySelector("#id");
 document.querySelector(".class");   
 ```
 
-##### getElementsBy
+### getElementsBy
 
 ![](Attachments/getelement.png)
 
@@ -110,9 +110,9 @@ document.getElementsByClassName('class');
 ```
 
 
-#### Modifying Document 
+## Modifying Document 
 
-##### **innerHTML**
+### **innerHTML**
 
 ![](Attachments/changed.png)
 
@@ -123,7 +123,7 @@ document.getElementById('id').innerHTML = "This is Chaanged";
 ```
 
 
-##### **Create Element**
+### **Create Element**
 
 by using `document.createElement` we can add element to the web page
 
@@ -140,7 +140,7 @@ h1.innerHTML = "<strong>H1</strong> Created";
 document.body.appendChild(h1);
 ```
 
-##### **Remove Element**
+### **Remove Element**
 
 As you have already run the above code then 
 
@@ -150,7 +150,7 @@ setTimeout(() => h1.remove(), 50);
 ```
 
 
-##### **Event Handling** 
+### **Event Handling** 
 
 In our script the code for `change-color`  button is shown below
 
@@ -177,7 +177,7 @@ we have selected the the change color button and add an  event lisner to it whic
 you can try by clicking on it 
 
 
-#### **DOM XSS**
+## **DOM XSS**
 
 The DOM XSS means the atttacker can use the dom functionality in order to inject the javascript payload into the web page by this attcker can if possible can do following things
 - Account Takeover by cookie hijacking or session hijacking using DOM XSS
