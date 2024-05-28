@@ -60,7 +60,7 @@ we have `window object`  it is a global object for javascitpt and also known as 
 Download 
 
 Run Command in Console to see 
-##### by querySelector
+### by querySelector
 
 ![](Attachments/grabbing.png)
 -> Like the above you can try every below thing in console
