@@ -3,8 +3,10 @@
 DOM Stands for Document Object Model. It consists of 3 things 
 
 **Document**  :  A HTML document, which defines the structure of wepasge
-**Objects**       :  Objects are the elements of the html here, Objects have some properties and    methods and methods are the function the object have. 
-**Model**          :  Representation of HTML Document.
+
+**Objects**   :  Objects are the elements of the html here, Objects have some properties and methods and methods are the function the object have. 
+
+**Model**     :  Representation of HTML Document.
 
 
 ## What is the DOM?
