@@ -187,7 +187,7 @@ The DOM XSS means the atttacker can use the dom functionality in order to inject
 - Redirect the Website Traffic to own phising page and have user's credential
 
 
-You can use the Following files
+You can use the Following files : https://github.com/pravinsinghmaravi/Web/tree/ee3a26a6bf99cfe2a880d2eca270a09630ff229e/DOM/Attachments/DOM%20Site%20Files
 
 
 
