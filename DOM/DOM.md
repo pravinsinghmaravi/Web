@@ -1,4 +1,4 @@
-
+# DOM 
 
 DOM Stands for Document Object Model. It consists of 3 things 
 
