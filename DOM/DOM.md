@@ -62,7 +62,7 @@ DOM Also enable us to create,remove and modify the elements of html and css. Let
 
 ## Accessing the DOM
 
-Download : [DOM/Attachments/Our Testing Site Files ](https://github.com/pravinsinghmaravi/Web/tree/b366679a975537b0718637203175c7ea2c8fe389/DOM/Attachments/Our%20Testing%20Site%20Files)
+[Download the Testing File]
 
 In the above folder the files are placed we wiill be using them to understand the following things
 
