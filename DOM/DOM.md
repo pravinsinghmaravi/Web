@@ -8,6 +8,20 @@ DOM Stands for Document Object Model. It consists of 3 things
 
 **Model**     :  Representation of HTML Document.
 
+- [DOM](https://github.com/pravinsinghmaravi/Web/blob/main/DOM/DOM.md#dom)	
+	 - [What is the DOM?](https://github.com/pravinsinghmaravi/Web/blob/main/DOM/DOM.md#what-is-the-dom)	
+	 - [Accessing the DOM](https://github.com/pravinsinghmaravi/Web/blob/main/DOM/DOM.md#accessing-the-dom) 			
+	   - [by querySelector](https://github.com/pravinsinghmaravi/Web/blob/main/DOM/DOM.md#by-queryselector)
+	   - [getElementsBy](https://github.com/pravinsinghmaravi/Web/blob/main/DOM/DOM.md#getelementsby)
+	 - [Modifying Document](https://github.com/pravinsinghmaravi/Web/blob/main/DOM/DOM.md#modifying-document)
+	   - [Create Element](https://github.com/pravinsinghmaravi/Web/blob/main/DOM/DOM.md#create-element)
+	   - [Remove Element](https://github.com/pravinsinghmaravi/Web/blob/main/DOM/DOM.md#remove-element)
+	   - [Event Handling](https://github.com/pravinsinghmaravi/Web/blob/main/DOM/DOM.md#event-handling)
+	 - [DOM XSS](https://github.com/pravinsinghmaravi/Web/blob/main/DOM/DOM.md#dom-xss)
+	 - [Reference](https://github.com/pravinsinghmaravi/Web/blob/main/DOM/DOM.md#reference)
+
+
+
 ## What is the DOM?
 
 it is an ```object-oriented```  , ```Hierarichal```  and ```tree```  like  representation of the web page,.
