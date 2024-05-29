@@ -219,3 +219,20 @@ put this in search string
 ```
 "#" onmouseover=alert(1)
 ```
+
+## Reference 
+
+[armour](https://www.armourinfosec.com)
+
+[portswigger.net](https://portswigger.net/web-security/cross-site-scripting/dom-based)
+
+[hackstricks](https://book.hacktricks.xyz/pentesting-web/xss-cross-site-scripting/dom-xss#javascript-injection)
+
+[freecodecamp](https://www.freecodecamp.org/news/the-javascript-dom-manipulation-handbook/)
+
+[javascript.info](https://javascript.info/dom-nodes)
+
+[w3school](https://www.w3schools.com/js/js_htmldom.asp)
+
+[mdn](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+
