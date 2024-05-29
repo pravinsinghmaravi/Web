@@ -232,12 +232,14 @@ document.write('<a id="anchor" href='+query+'><h1>your Site</h1></a>');
 ```
 
 
-If you give the below Payload on hovering over the element it will  where it is place and alert will pop out 
+If you give the below Payload on hovering over the element where it is placed will pop out alert. 
 
 put this in search string
 ```
 "#" onmouseover=alert(1)
 ```
+instead of alert attacker will use javascript payload to compromise the intreaction of victim with the webappliction,succesfully exploiting the DOM XSS
+
 
 ## Reference 
 
