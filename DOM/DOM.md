@@ -60,23 +60,32 @@ Like the DOM we have BOM which is browser object model DOM is for document and B
 
 DOM Also enable us to create,remove and modify the elements of html and css. Let us see How we actually accessing it.
 
+
 ## Accessing the DOM
 
-[Download the Testing File]
+[Download the Testing File](https://github.com/pravinsinghmaravi/Web/tree/d402d0128b25af495673ba1332c5f921f63f5e39/DOM/Attachments/Our%20Testing%20Site%20Files)
 
 In the above folder the files are placed we wiill be using them to understand the following things
 
-Run Command in Console to see 
+Before doing anything to the document, How do we select the elments or say objects in the webpage there are various methods we will look into ```querySelector``` & ```getElements``` for now
+
+Load the index.html file from the above file we have in browser
+
+Run Command in Console to see (you can go there by pressing ```ctrl + shift + i``` in browser,you wiill see the console tab adjacent to inspect) 
+
 ### by querySelector
 
 ![](Attachments/grabbing.png)
 -> Like the above you can try every below thing in console
 
--  for selecting p tag
+We will be selecting `p` tag where This is DOM written as you will type code in console the browser automatically tell you that you want this element right as shown in above image
+
+-  for selecting `p` tag
 ```js
 document.querySelector("p");  
 ```
 
+So,the other one is `querySelectorAll` it select all the provided element in webpage, in our case from below code it will select all the `p` tag in our webpage or document node.
 
 - selecting all `p`  nodes
 ```js
@@ -99,7 +108,7 @@ document.querySelector(".class");
 
 ![](Attachments/getelement.png)
 
-It  give us the direct selection againg Selecting our paragraph
+It  give us the direct selection againg Selecting our paragraph,It is upto us whether we want to selct from the class,id & tagname
 
 - by `id`
 ```js
@@ -128,7 +137,7 @@ To change the content in web page we can use `innerHTML`
 ```js
 document.getElementById('id').innerHTML = "This is Chaanged";	
 ```
-
+As you run the above thing our This is DOM will change into This is changed we can see
 
 ### **Create Element**
 
@@ -146,6 +155,8 @@ h1.innerHTML = "<strong>H1</strong> Created";
 
 document.body.appendChild(h1);
 ```
+What here we are doing is creating a variable to store the selected element
+then assighning the classname, then changing its html to H1 Created
 
 ### **Remove Element**
 
@@ -181,20 +192,25 @@ count--;
 here as  we have already learnt how to select an element then now
 we have selected the the change color button and add an  event lisner to it which on click will change the background.
 
-you can try by clicking on it 
+you can try by clicking on it.
 
 
 ## **DOM XSS**
 
-The DOM XSS means the atttacker can use the dom functionality in order to inject the javascript payload into the web page by this attcker can if possible can do following things
+The DOM XSS means the atttacker can use the DOM functionality in order to inject the javascript payload into the web page by this attcker can if possible can do following things
 - Account Takeover by cookie hijacking or session hijacking using DOM XSS
 - Change the Layout of the Web Page
 - Redirect the Website Traffic to own phising page and have user's credential
 
 
-You can use the Following files : https://github.com/pravinsinghmaravi/Web/tree/ee3a26a6bf99cfe2a880d2eca270a09630ff229e/DOM/Attachments/DOM%20Site%20Files
+You can use the Following files : [DOM Site Files](https://github.com/pravinsinghmaravi/Web/tree/ee3a26a6bf99cfe2a880d2eca270a09630ff229e/DOM/Attachments/DOM%20Site%20Files)
+
+Attacker uses a source(by which the site take input) which is being utilized by the sink(methods which use DOM to modify Document) below are som sinks and source
 
 
+| <centre>Source</centre>                                                                                                 | <centre>Sinks</centre>                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| document.URL<br>document.documentURI<br>document.URLUnencoded<br>document.baseURI<br>location.search<br>document.cookie | document.write()<br>document.writeln() <br>document.domain <br>element.innerHTML <br>element.outerHTML |
 
 
 Below is the site 
