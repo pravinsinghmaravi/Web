@@ -2,16 +2,15 @@
 
 DOM Stands for Document Object Model. It consists of 3 things 
 
-**Document**  :  A HTML document, which defines the structure of wepasge
+**Document**  :  A HTML document, which defines the structure of webpage
 
 **Objects**   :  Objects are the elements of the html here, Objects have some properties and methods and methods are the function the object have. 
 
 **Model**     :  Representation of HTML Document.
 
-
 ## What is the DOM?
 
-it is an <mark style="background: #ABF7F7A6;"> object-oriented </mark>  , <mark style="background: #ABF7F7A6;">Hierarichal</mark>  and <mark style="background: #ABF7F7A6;">tree</mark>  like  representation of the web page,.
+it is an ```object-oriented```  , ```Hierarichal```  and ```tree```  like  representation of the web page,.
 
 | <center>Browser See</center>  | <center>HTML Doc</center>          |
 | ----------------------------- | ---------------------------------- |
@@ -25,16 +24,17 @@ it is an <mark style="background: #ABF7F7A6;"> object-oriented </mark>  , <mark 
 As you can see by above images the browser see the document like in the image *Browser See*
 by actually this browser understand the document or use the DOM.
 DOM is not only limited to browser it is a model that can be utilized by server some programs etc.
+So,From the Eye of the Browser doucument look like as showm in _browser see_.
 
 When a web page is loaded, the browser creates a **D**ocument **O**bject **M**odel of the page.
 
-Due to DOM the javascript can interact with the html,understand the doc
-doument can be modified with a scripting language such as JavaScript using DOM.
-Means, it gives <mark style="background: #ABF7F7A6;">notion</mark> of web pages,HTML Documents, SVG Documents for javascript
+Due to DOM the javascript can interact with the html,understand the doc.
+Doument can be modified with a scripting language such as JavaScript using DOM.
+Means, it gives ```notion``` of web pages,HTML Documents, SVG Documents for javascript
  javascript by default doesn't know what the html document is 
 
 
- DOM represents the document as <mark style="background: #ABF7F7A6;">nodes</mark> and <mark style="background: #BBFABBA6;">objects</mark>; that way, programming languages can interact with the page.
+ DOM represents the document as ```nodes``` and ```objects``` that way, programming languages can interact with the page.
  Node is an individual objects. then what is object ? object is nothing but collection of methods and properties according to the context of the objects , which give user or dev to interact , modify and access. 
 e.g  body has its child object (onclick, style)
 
@@ -47,15 +47,18 @@ document.body.style.background = "#2a2b2a"; // make the background #2a2b2a
 setTimeout(() => document.body.style.background = '', 3000); // return back
 ```
 
-| <center><b>Below Showing the DOM</b></center> |
+| <center><b>Below Showing the BOM</b></center> |
 | --------------------------------------------- |
 | ![\|535](Attachments/window-object-vid.gif)   |
 
-- `window` object of Wikipedia Page
+- the above image is showing `window` object of Wikipedia Page
 
 From The Image *Browser See* 
 we have `window object`  it is a global object for javascitpt and also known as root object 
 
+Like the DOM we have BOM which is browser object model DOM is for document and BOM is for browser
+
+DOM Also enable us to create,remove and modify the elements of html and css. Let us see How we actually accessing it.
 
 ## Accessing the DOM
 
