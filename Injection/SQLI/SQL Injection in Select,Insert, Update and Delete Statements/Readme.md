@@ -21,4 +21,22 @@ enable TINYINT (1) NOT NULL DEFAULT 1
 );
 ```
 
-## About  the Files
+## The Files
+
+All the file are accordance with their name
+
+[connection.php](./connection.php)
+
+[delete.php](./delete.php)
+
+[index.php](./index.php)
+
+[login.php](./login.php)
+
+[logout.php](./logout.php)
+
+[profile.php](./profile.php)
+
+[protected_page.php](./protected_page.php)
+
+[register.php](./register.php)
