@@ -16,12 +16,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (password_verify($password, $user['password'])) {
             $_SESSION['username'] = $user['username'];
             header("Location: protected_page.php");
-            exit();
+           // exit();
         } else {
-            $message = "Invalid password";
+            $message = "Invalid password for  ". $user['username'];
         }
     } else {
-        $message = "Invalid username";
+        $user = mysqli_fetch_assoc($result);
+        echo  "Invalid username " . $user['username'];
     }
 }
 ?>

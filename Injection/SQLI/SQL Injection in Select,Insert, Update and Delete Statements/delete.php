@@ -1,36 +1,22 @@
 <?php
-session_start();
 include("connection.php");
 
-// Redirect if user is not logged in
-if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
-    exit();
-}
-
-// Handle POST request to delete account
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Sanitize input to prevent SQL injection
-    $username_to_delete = mysqli_real_escape_string($connection, $_POST['username']);
+    if (isset($_POST['delete_account'])) {
+        $username = $_POST['username']; // Get username from the form
 
-    // Check if the current user is attempting to delete their own account
-    $current_username = $_SESSION['username'];
-    if ($username_to_delete === $current_username) {
-        echo '<font color="#ff0000">You cannot delete your own account using this form.</font>';
-    } else {
-        // SQL query to delete user
-        $delete_query = "DELETE FROM users WHERE username = '$username_to_delete'";
-
+        $delete_query = "DELETE FROM users WHERE username='$username'";
         if (mysqli_query($connection, $delete_query)) {
-            // Account deleted successfully
-            echo '<font color="#0000ff">Account deleted successfully!</font>';
+            // Redirect to index page after successful deletion
+            header("Location: index.php");
+            exit();
         } else {
-            // Error in deletion query
-            echo '<font color="#ff0000">Error deleting account: ' . mysqli_error($connection) . '</font>';
+            echo '<div class="message error">Error: ' . mysqli_error($connection) . '</div>';
         }
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -47,11 +33,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
         }
 
         .container {
-            width: 300px;
+            width: 100%;
+            max-width: 400px;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
@@ -60,56 +47,75 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         h1 {
-            color: #333;
-            margin-bottom: 10px;
+            margin-bottom: 30px;
         }
 
-        p {
+        .panel {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
             margin-bottom: 20px;
+            border-radius: 5px;
         }
 
         .form-group {
-            text-align: left;
             margin-bottom: 15px;
         }
 
-        .form-group label {
-            font-weight: bold;
-        }
-
-        .form-group input {
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
             width: 100%;
             padding: 8px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 3px;
+            box-sizing: border-box;
         }
 
-        .btn {
+        .form-group input[type="submit"] {
             background-color: #dc3545;
             color: white;
+            cursor: pointer;
+            border: none;
             padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
+            border-radius: 3px;
         }
 
-        .btn:hover {
+        .form-group input[type="submit"]:hover {
             background-color: #c82333;
+        }
+
+        .message {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Delete Account</h1>
-        <p>Enter the username of the account you want to delete:</p>
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+<div class="container">
+    <h1>Delete Account</h1>
+
+    <!-- Delete Account Section -->
+    <div class="panel">
+        <h2>Delete Your Account</h2>
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" onsubmit="return confirm('Are you sure you want to delete your account? This action cannot be undone.')">
             <div class="form-group">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required />
+                <input type="text" id="username" name="username" required>
             </div>
-            <input type="submit" class="btn" value="Delete Account" />
+            <div class="form-group">
+                <input type="submit" name="delete_account" value="Delete Account" />
+            </div>
         </form>
-        <a href="protected_page.php" class="btn">Cancel</a>
     </div>
+
+    <a href="profile.php">Back to Profile</a>
+</div>
 </body>
 </html>

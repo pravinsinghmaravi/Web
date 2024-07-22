@@ -63,6 +63,7 @@ if (!isset($_SESSION['username'])) {
         <p>This is a protected page.</p>
         <div class="logout">
             <a href="logout.php">Logout</a>
+            <a href="delete.php">Delete Account</a>
             <a href="profile.php">Update Profile</a>
         </div>
     </div>

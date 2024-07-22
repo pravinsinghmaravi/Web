@@ -76,7 +76,6 @@
     <div class="container">
         <h1>Welcome to Our Site</h1>
         <p>Choose an action:</p>
-        <a href="delete.php" class="btn btn-delete">Delete Account</a>
         <a href="login.php" class="btn">Login</a>
         <a href="register.php" class="btn btn-register">Register</a>
     </div>
